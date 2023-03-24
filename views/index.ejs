@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climatempo Brasil</title>
+    <link rel="stylesheet" href="public/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="imgBox">
+            <% if(typeof apiData != 'undefined') { %>
+                <div class="main">
+                    <h1><%=apiData[0].selectedCountry%></h1>
+                    <img src="<%= apiData[0].weatherIcon %>" alt="">
+                </div>
+                
+                <div class="actTemp">
+                    <h4>Actual Temperature</h2>
+                    <p><%=apiData[0].temperature%> °C</p>
+                </div>
+                <div class="minMaxTemp">
+                    <div class="minTemp">
+                        <h6>Min Temp</h6>
+                        <p><%=apiData[0].temperatureMin%> °C</p>
+                    </div>
+                    <div class="maxTemp">
+                        <h6>Max Temp</h6>
+                        <p><%=apiData[0].temperatureMax%> °C</p>
+                    </div>
+                </div>
+                <div class="humidity">
+                    <h4 >Humidity</h2>
+                    <p><%=apiData[0].humidity%>%</p>
+                </div>
+              <% } %>
+        </div>
+
+        <div class="inputBox">
+            <form action="/" method="post">
+                <label for=""></label>
+                <select name="" id=""></select>
+                <label for="states_select_id">States</label>
+                <select name="states_select_name" id="states_select_id">
+                        <%for(x of brazilStates){%>
+                            <option><%=x%></option>
+                        <%}%>
+                </select>
+                <div class="buttonBox">
+                    <button>Select</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

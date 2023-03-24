@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+    color: #fff;
+}
+:root{
+    --color1: #6BA8F2;
+    --color2: #5B6AF5;
+    --color3: #4F5275;
+    --color4: #2B3375;
+    --color5:#111B5C;
+}
+body{
+    background: var(--color1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container{
+    color: #fff;
+    height: 90vh;
+    width: 100%;
+    min-width: 350px;
+    max-width: 700px;
+    border: 2px solid rgba(255,255,255, .5);
+    background:var(--color4) ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container .imgBox{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .imgBox .main{
+    text-align: center;
+}
+
+.container .imgBox .actTemp{
+    text-align: center;
+}
+
+.container .imgBox .minMaxTemp{
+    display: flex;
+}
+
+.container .imgBox .minMaxTemp div{
+    padding: 1vh 1.5vw;
+}
+
+.container .imgBox .humidity{
+    text-align: center;
+}
+
+.container .inputBox{
+    width: 100%;
+    height: 40%;
+}
+
+.container .inputBox form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+.container .inputBox form select{
+    width: 80%;
+    outline: none;
+    text-align: center;
+    padding: 1vw;
+    border: none;
+    border-radius: 15px;
+    background: var(--color2);
+    transition: .5s;
+}
+.container .inputBox form select:hover{
+    cursor: pointer;
+    background: var(--color3);
+}
+.container .inputBox form button{
+    padding: 2vh 5vw;
+    background: var(--color2);
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    transition: .5s;
+}
+
+.container .inputBox form button:hover{
+    cursor: pointer;
+    background: var(--color3);
+}
